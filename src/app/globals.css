@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05060f;
+  --foreground: #f9fbff;
+  --muted: #111423;
+  --accent: #39ff14;
+  --accent-soft: #1f8f4d;
+  --cyan: #00e5ff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), "Playfair Display", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+  color: var(--foreground);
+}
+
+.glass-panel {
+  background: color-mix(in srgb, var(--muted) 75%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  backdrop-filter: blur(28px);
+}
+
+.neon-border {
+  border: 1px solid color-mix(in srgb, var(--accent) 65%, transparent 35%);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.75s ease forwards;
+  opacity: 0;
+}
+
+.delay-1 {
+  animation-delay: 0.15s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.45s;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.radial-gradient {
+  background: radial-gradient(
+      circle at 20% 20%,
+      color-mix(in srgb, var(--cyan) 35%, transparent) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      color-mix(in srgb, var(--accent) 25%, transparent) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      color-mix(in srgb, var(--accent) 30%, transparent) 0%,
+      transparent 65%
+    ),
+    #05060f;
+}
+
+.grid-overlay {
+  background-image: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--accent) 10%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      color-mix(in srgb, var(--cyan) 12%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 120px 120px;
+  opacity: 0.35;
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 38px color-mix(in srgb, var(--accent) 32%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 80%, transparent 20%);
+}
+
+.button-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.button-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent), var(--cyan));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  filter: blur(12px);
+  z-index: -1;
+}
+
+.button-glow:hover::after {
+  opacity: 0.75;
+}
+
+.card-outline {
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  transition: border-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-outline:hover {
+  border-color: color-mix(in srgb, var(--accent) 60%, transparent 40%);
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.sticky-disclaimer {
+  backdrop-filter: blur(18px);
+  background: color-mix(in srgb, var(--muted) 85%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee-track > span {
+  color: color-mix(in srgb, var(--accent) 65%, var(--cyan) 35%);
+  letter-spacing: 0.3em;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
