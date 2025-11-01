@@ -3,22 +3,22 @@ import Link from "next/link";
 
 const posts = [
   {
+    slug: "intro-to-bots",
     title: "Intro to Bots",
     excerpt:
       "Understand core automation vocabulary, where bots thrive, and how to set expectations before going live.",
-    href: "#intro-to-bots",
   },
   {
+    slug: "safe-copy-trading",
     title: "Safe Copy-Trading",
     excerpt:
       "Evaluate signal providers, size your exposure, and design drawdown rules that protect community capital.",
-    href: "#safe-copy-trading",
   },
   {
+    slug: "ai-in-finance",
     title: "AI in Finance",
     excerpt:
       "See how BUXI combines AI with human review to deliver explainable insights without opaque black-box risk.",
-    href: "#ai-in-finance",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function LearnPage() {
         {posts.map((post) => (
           <Link
             key={post.title}
-            href={post.href}
+            href={`/learn/${post.slug}`}
             className="group relative flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/3 p-6 transition hover:border-(--accent)/60 hover:shadow-[0_0_28px_rgba(57,255,20,0.35)]"
           >
             <div className="space-y-3">
