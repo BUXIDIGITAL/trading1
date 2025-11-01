@@ -58,26 +58,31 @@ const marqueeItems = [
 export default function Home() {
   return (
     <div className="space-y-24 md:space-y-28">
-      <section className="relative overflow-hidden rounded-4xl border border-white/10 bg-white/4 p-8 sm:p-10 lg:p-14">
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 -z-10 opacity-70 lg:block"
-          aria-hidden
-        >
+      <section className="relative overflow-hidden rounded-4xl border border-white/10 bg-black/60 px-6 py-20 sm:px-10 lg:px-16">
+        <div className="absolute inset-0 -z-10">
           <Image
-            src="/assets/network-glow.svg"
-            alt="Neon network visualization"
+            src="/assets/hero-grid.svg"
+            alt="Futuristic trading grid"
             fill
-            className="object-cover"
-            sizes="50vw"
             priority
+            className="object-cover opacity-80"
+            sizes="100vw"
+          />
+          <div
+            className="absolute inset-0 bg-[radial-gradient(circle_at_top,#39FF14/22%,transparent_58%)]"
+            aria-hidden
+          />
+          <div
+            className="absolute inset-0 bg-[linear-gradient(120deg,rgba(6,14,24,0.78),rgba(2,2,6,0.92))]"
+            aria-hidden
           />
         </div>
-        <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="relative grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-8">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-4 py-2 text-[11px] uppercase tracking-[0.35em] text-white/60">
               Smarter Systems · Honest Automation
             </span>
-            <h1 className="font-playfair text-4xl leading-tight text-white text-balance max-w-xl sm:text-5xl lg:text-6xl lg:max-w-2xl">
+            <h1 className="font-playfair text-4xl leading-tight text-white text-balance max-w-2xl sm:text-5xl lg:text-6xl">
               Automation that feels human, performs like code.
             </h1>
             <p className="max-w-xl text-base text-white/70">
@@ -114,16 +119,22 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="relative -mx-2 rounded-4xl border border-white/10 bg-black/50 p-4 sm:-mx-4">
-            <div className="absolute inset-0 bg-linear-to-br from-(--cyan)/15 via-transparent to-(--accent)/20" aria-hidden />
-            <Image
-              src="/assets/assistant-interface.svg"
-              alt="BUXI assistant dashboard"
-              width={720}
-              height={540}
-              className="relative h-full w-full rounded-3xl object-cover"
-              priority
+          <div className="relative">
+            <div
+              className="absolute -inset-6 rounded-[3rem] bg-[radial-gradient(circle_at_top,#39FF14/14%,transparent_70%)] blur-3xl opacity-60"
+              aria-hidden
             />
+            <div className="relative overflow-hidden rounded-[2.8rem] border border-white/15 bg-black/65 p-4">
+              <div className="absolute inset-0 bg-linear-to-br from-(--cyan)/15 via-transparent to-(--accent)/18" aria-hidden />
+              <Image
+                src="/assets/assistant-interface.svg"
+                alt="BUXI assistant dashboard"
+                width={720}
+                height={540}
+                className="relative h-full w-full rounded-3xl object-cover shadow-[0_0_55px_rgba(17,255,138,0.18)]"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
