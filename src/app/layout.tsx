@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Inter, Playfair_Display } from "next/font/google";
+import { DesktopNav, MobileNav } from "@/components/site-nav";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
 
 const navigation = [
   { href: "/", label: "Home" },
@@ -53,9 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="radial-gradient">
-      <body
-        className={`${inter.variable} ${playfair.variable} antialiased selection:bg-(--accent) selection:text-black`}
-      >
+      <body className="antialiased selection:bg-(--accent) selection:text-black">
         <div className="relative flex min-h-screen flex-col">
           <div
             className="grid-overlay pointer-events-none fixed inset-0 -z-10"
@@ -74,17 +62,7 @@ export default function RootLayout({
                   BUXI DIGITAL
                 </span>
               </Link>
-              <nav className="hidden gap-6 text-sm font-medium uppercase tracking-widest text-white/70 md:flex">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="relative transition hover:text-(--accent)"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </nav>
+              <DesktopNav items={navigation} />
               <Link
                 href="/learn"
                 className="button-glow rounded-full border border-(--accent) bg-(--accent) px-4 py-2 text-sm font-semibold uppercase tracking-widest text-black shadow-[0_0_25px_rgba(57,255,20,0.35)] transition hover:bg-(--accent)/90"
@@ -92,17 +70,7 @@ export default function RootLayout({
                 Browse Guides
               </Link>
             </div>
-            <nav className="mx-auto mt-1 flex w-full max-w-6xl gap-4 overflow-x-auto px-6 pb-4 text-[11px] uppercase tracking-[0.35em] text-white/60 md:hidden">
-              {navigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="shrink-0 rounded-full border border-white/10 px-4 py-2 transition hover:border-(--accent) hover:text-(--accent)"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
+            <MobileNav items={navigation} />
           </header>
           <main className="flex-1">
             <div className="mx-auto w-full max-w-6xl px-6 py-12 md:py-16">

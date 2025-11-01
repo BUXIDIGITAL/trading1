@@ -87,13 +87,13 @@ export default function Home() {
         <div className="relative grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-8">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-4 py-2 text-[11px] uppercase tracking-[0.35em] text-white/60">
-              Copy Trading · Affiliate Income · Education
+              Bot Trading · Automation Systems · Education
             </span>
             <h1 className="font-playfair text-4xl leading-tight text-white text-balance max-w-2xl sm:text-5xl lg:text-6xl">
-              Copy Trading Guides & Affiliate Tools
+              Your Trusted Bot Trading Playbook
             </h1>
             <p className="max-w-xl text-base text-white/70">
-              BUXI DIGITAL keeps things simple: curated platforms, plain-language checklists, and calculators that show exactly how recurring trading and referral income can stack up.
+              BUXI DIGITAL keeps bot trading simple: curated platforms, plain-language checklists, and calculators that show exactly how recurring automation and referral income can stack up.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link

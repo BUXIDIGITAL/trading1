@@ -17,15 +17,15 @@ export default function TradingAssistantPage() {
             BUXI Trading Assistant
           </p>
           <h1 className="font-playfair text-4xl text-white sm:text-5xl">
-            Education, updates, and accountability in one place.
+            Package automation insight into ready-to-use client updates.
           </h1>
           <p className="text-lg text-white/70">
-            The Trading Assistant isnt a secret dashboard—its a support kit. Use it to brief communities, track automation changes, and answer the same questions once instead of a hundred times.
+            The Trading Assistant isn&apos;t a secret dashboard—it&apos;s a support kit. Use it to brief communities, track automation changes, and answer the same questions once instead of a hundred times.
           </p>
           <ul className="space-y-4 text-sm text-white/65">
             <li className="flex items-start gap-3">
               <span className="mt-1 inline-block h-2 w-2 rounded-full bg-(--accent)" />
-              <span>Daily or weekly bulletins that cover macro context, order-flow notes, and the bots youre monitoring.</span>
+              <span>Daily or weekly bulletins that cover macro context, order-flow notes, and the bots you&apos;re monitoring.</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1 inline-block h-2 w-2 rounded-full bg-(--accent)" />

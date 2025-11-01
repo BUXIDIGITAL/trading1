@@ -1,29 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-
-const posts = [
-  {
-    slug: "intro-to-bots",
-    eyebrow: "Automation Playbooks",
-    title: "Intro to Bots",
-    excerpt:
-      "How we onboard traders to Mizar, 3Commas, and Pionex with no-drama setup steps, performance fees, and compounding examples.",
-  },
-  {
-    slug: "safe-copy-trading",
-    eyebrow: "Risk & Compliance",
-    title: "Safe Copy-Trading",
-    excerpt:
-      "Structure a copy desk that balances community trust, provider diligence, and the tax advantages available to lean operators.",
-  },
-  {
-    slug: "ai-in-finance",
-    eyebrow: "Automation Systems",
-    title: "AI in Finance",
-    excerpt:
-      "See how BuXiAi chat, voice, affiliate, and email loops snap together around a conversion-focused web stack.",
-  },
-];
+import { articles, learnFeaturedSlugs } from "./articles-data";
 
 export const metadata: Metadata = {
   title: "Learn",
@@ -31,10 +8,12 @@ export const metadata: Metadata = {
 };
 
 export default function LearnPage() {
+  const posts = articles.filter((article) => learnFeaturedSlugs.includes(article.slug));
+
   return (
     <div className="space-y-10">
       <header className="space-y-4 text-center">
-  <h1 className="font-playfair text-4xl text-white">Learn with BUXI</h1>
+        <h1 className="font-playfair text-4xl text-white">Learn with BUXI</h1>
         <p className="mx-auto max-w-2xl text-base text-white/65">
           A growing knowledge base for responsible automation. Subscribe to stay informed as we release long-form breakdowns, video walkthroughs, and community AMAs.
         </p>
@@ -53,7 +32,7 @@ export default function LearnPage() {
               <h2 className="text-xl font-semibold text-white transition group-hover:text-(--accent)">
                 {post.title}
               </h2>
-              <p className="text-sm text-white/60">{post.excerpt}</p>
+              <p className="text-sm text-white/60">{post.excerpt ?? post.description}</p>
             </div>
             <span className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.35em] text-(--cyan) transition group-hover:text-(--accent)">
               Read Preview
