@@ -191,6 +191,10 @@ const articles = [
 
 const articleMap = new Map(articles.map((article) => [article.slug, article]));
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+export const revalidate = false;
+
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
