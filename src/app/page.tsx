@@ -83,17 +83,17 @@ export default function Home() {
               Smarter Systems · Honest Automation
             </span>
             <h1 className="font-playfair text-4xl leading-tight text-white text-balance max-w-2xl sm:text-5xl lg:text-6xl">
-              Automation that feels human, performs like code.
+              Built to Automate. Designed to Help You Win.
             </h1>
             <p className="max-w-xl text-base text-white/70">
-              BUXI DIGITAL fuses transparent automation with rapid-fire education. Traders see the why behind every move—and teams scale trust along with performance.
+              Real tools, real results — a hub for trading automation, signals, copy trading, and education.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
-                href="/trading-assistant"
+                href="#learn"
                 className="button-glow rounded-full bg-(--accent) px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-black shadow-[0_0_34px_rgba(57,255,20,0.35)] transition hover:bg-(--accent)/90"
               >
-                Launch Assistant Demo
+                Explore the System
               </Link>
               <Link
                 href="/systems"
@@ -224,7 +224,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-10 rounded-4xl border border-white/10 bg-white/5 p-8 md:grid-cols-[1fr_0.9fr] md:p-12">
+  <section id="learn" className="grid gap-10 rounded-4xl border border-white/10 bg-white/5 p-8 md:grid-cols-[1fr_0.9fr] md:p-12">
         <div className="space-y-5">
           <span className="rounded-full border border-white/15 px-3 py-1 text-[11px] uppercase tracking-[0.35em] text-white/50">
             Learn Faster
