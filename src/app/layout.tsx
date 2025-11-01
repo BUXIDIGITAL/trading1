@@ -15,33 +15,34 @@ const playfair = Playfair_Display({
 
 const navigation = [
   { href: "/", label: "Home" },
-  { href: "/systems", label: "Systems" },
-  { href: "/trading-assistant", label: "Trading Assistant" },
-  { href: "/about", label: "About" },
+  { href: "/systems", label: "Platforms" },
   { href: "/learn", label: "Learn" },
+  { href: "/tools/compounding-calculator", label: "Calculator" },
+  { href: "/trading-assistant", label: "Assistant" },
+  { href: "/about", label: "About" },
   { href: "/legal", label: "Legal" },
 ];
 
 export const metadata: Metadata = {
   title: {
-    default: "BUXI DIGITAL | Smarter Systems. Honest Automation.",
+    default: "BUXI DIGITAL | Automated Copy Trading Guides",
     template: "%s | BUXI DIGITAL",
   },
   description:
-    "Discover BUXI DIGITAL's trading ecosystem, automation systems, and the BUXI Trading Assistant for high-trust investing support.",
+    "BUXI DIGITAL curates copy-trading platforms, compounding tools, and plain-language guides so you can grow recurring trading and affiliate income.",
   metadataBase: new URL("https://buxidigital.com"),
   openGraph: {
-    title: "BUXI DIGITAL Trading Automation",
+    title: "BUXI DIGITAL · Copy Trading & Affiliate Hub",
     description:
-      "Explore smart trading systems, affiliate platforms, and the BUXI Trading Assistant for responsible automation.",
+      "Learn how to launch bots, track returns, and monetise referrals with BUXI DIGITAL's guides and calculators.",
     type: "website",
     url: "https://buxidigital.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BUXI DIGITAL Trading Automation",
+    title: "BUXI DIGITAL · Copy Trading & Affiliate Hub",
     description:
-      "Explore smart trading systems, affiliate platforms, and the BUXI Trading Assistant for responsible automation.",
+      "Learn how to launch bots, track returns, and monetise referrals with BUXI DIGITAL's guides and calculators.",
   },
 };
 
@@ -85,10 +86,10 @@ export default function RootLayout({
                 ))}
               </nav>
               <Link
-                href="/trading-assistant"
+                href="/learn"
                 className="button-glow rounded-full border border-(--accent) bg-(--accent) px-4 py-2 text-sm font-semibold uppercase tracking-widest text-black shadow-[0_0_25px_rgba(57,255,20,0.35)] transition hover:bg-(--accent)/90"
               >
-                Join the Assistant
+                Browse Guides
               </Link>
             </div>
             <nav className="mx-auto mt-1 flex w-full max-w-6xl gap-4 overflow-x-auto px-6 pb-4 text-[11px] uppercase tracking-[0.35em] text-white/60 md:hidden">

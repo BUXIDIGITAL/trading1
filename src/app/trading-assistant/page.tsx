@@ -5,7 +5,7 @@ import { SignupForm } from "@/components/signup-form";
 export const metadata: Metadata = {
   title: "Trading Assistant",
   description:
-    "Meet the BUXI Trading Assistant—your educational AI for insights, accountability, and responsible automation onboarding.",
+    "Explore the BUXI DIGITAL support kit—daily briefs, onboarding checklists, and community-ready updates for responsible automation.",
 };
 
 export default function TradingAssistantPage() {
@@ -17,29 +17,23 @@ export default function TradingAssistantPage() {
             BUXI Trading Assistant
           </p>
           <h1 className="font-playfair text-4xl text-white sm:text-5xl">
-            Your educational AI for market insights.
+            Education, updates, and accountability in one place.
           </h1>
           <p className="text-lg text-white/70">
-            The BUXI Assistant demystifies trade ideas, risk parameters, and automation flows in plain language. Whether you are onboarding a cohort or running a private desk, it keeps everyone aligned with real-time context.
+            The Trading Assistant isnt a secret dashboard—its a support kit. Use it to brief communities, track automation changes, and answer the same questions once instead of a hundred times.
           </p>
           <ul className="space-y-4 text-sm text-white/65">
             <li className="flex items-start gap-3">
               <span className="mt-1 inline-block h-2 w-2 rounded-full bg-(--accent)" />
-              <span>
-                Daily market briefs with macro, on-chain, and microstructure highlights tailored to your watchlist.
-              </span>
+              <span>Daily or weekly bulletins that cover macro context, order-flow notes, and the bots youre monitoring.</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1 inline-block h-2 w-2 rounded-full bg-(--accent)" />
-              <span>
-                Signal breakdowns that show trigger logic, risk buffers, and suggested allocation tiers before you deploy.
-              </span>
+              <span>Onboarding scripts that explain allocation tiers, risk controls, and when to pause copy trading.</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1 inline-block h-2 w-2 rounded-full bg-(--accent)" />
-              <span>
-                Compliance-safe transcripts you can share with clients or communities to maintain full transparency.
-              </span>
+              <span>Ready-to-share updates for affiliates so everyone sees performance and payouts the same way.</span>
             </li>
           </ul>
           <SignupForm />
@@ -61,26 +55,22 @@ export default function TradingAssistantPage() {
       </section>
 
       <section className="grid gap-8 md:grid-cols-3">
-        {["Coach Mode", "Insights Mode", "Compliance Mode"].map((mode) => (
-          <div
-            key={mode}
-            className="glow-hover flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/3 p-6"
-          >
+        {["Brief", "Onboard", "Report"].map((mode) => (
+          <div key={mode} className="glow-hover flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/3 p-6">
             <h2 className="text-xl font-semibold text-white">{mode}</h2>
             <p className="text-sm text-white/60">
-              {mode === "Coach Mode"
-                ? "Step-by-step guidance for new traders, from account setup checklists to first automation go-lives."
-                : mode === "Insights Mode"
-                ? "Summarizes macro drivers, order-flow skews, and sentiment curves so you can adjust systems faster."
-                : "Automatically logs Q&A, distributes disclosures, and archives conversations for audits."}
+              {mode === "Brief"
+                ? "Send macro notes, trade adjustments, and affiliate promos in one consistent format."
+                : mode === "Onboard"
+                ? "Deliver checklists for exchange APIs, 2FA, and risk agreements before anyone copies a trade."
+                : "Log weekly performance, payouts, and reminders so compliance and community stay in sync."}
             </p>
           </div>
         ))}
       </section>
 
-      <div className="sticky-disclaimer fixed bottom-6 left-1/2 z-30 w-[calc(100%-3rem)] max-w-3xl -translate-x-1/2 rounded-2xl px-6 py-5 text-xs text-white/60">
-  <strong className="text-white">Disclaimer:</strong> The BUXI Trading Assistant provides educational
-        content only. It does not execute trades or offer financial advice. Always assess your own risk and consult a licensed professional where required.
+      <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-xs text-white/60">
+        <strong className="text-white">Reminder:</strong> The Trading Assistant shares educational content only. It does not execute trades or offer financial advice. Always assess your own risk and consult a licensed professional where required.
       </div>
     </div>
   );

@@ -8,25 +8,34 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="grid gap-12 lg:grid-cols-[1fr_0.75fr] lg:items-start">
+    <div className="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-start">
       <section className="space-y-6">
-        <h1 className="font-playfair text-4xl text-white">Built for accountable traders and educators.</h1>
+        <h1 className="font-playfair text-4xl text-white sm:text-5xl">Automation for people, not hype.</h1>
         <p className="text-lg text-white/70">
-          BUXI DIGITAL began as an internal framework for managing automated strategies across multiple venues. We needed systems that kept every stakeholder—analysts, operators, and community members—in sync without drowning in dashboards.
+          BUXI DIGITAL started with late nights reverse-engineering trading bots and automation tools from scratch. Every win came from persistence, patience, and a refusal to treat automation like a black box.
         </p>
         <p className="text-lg text-white/70">
-          Today we partner with trading desks, educators, and DAOs who demand the same standards. From compliance-ready reporting to educational playbooks, BUXI balances automation with the human context that keeps strategies sustainable.
+          That learning curve shaped our mission: make financial automation understandable, safe, and beneficial for anyone willing to put in honest work. We build guides and systems that explain the why behind every move so traders and communities stay confident.
         </p>
-        <p className="text-lg text-white/70">
-          We believe automation should empower thoughtful decision makers. Our tools elevate good judgment rather than replacing it, unlocking more time for scenario planning, relationship building, and innovation.
-        </p>
-        <blockquote className="rounded-3xl border border-(--accent)/20 bg-white/3 p-6 text-white">
+        <div className="grid gap-6 rounded-3xl border border-white/10 bg-white/4 p-6 text-sm text-white/70">
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.35em] text-(--cyan)">Vision</h2>
+            <p className="mt-2 text-white/70">
+              Build systems that make automation and opportunity accessible to more people—led by transparency, community, and trust.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.35em] text-(--cyan)">Mission</h2>
+            <p className="mt-2 text-white/70">
+              Bridge the gap between technology and people with simple workflows, patient education, and tools that reward honesty, persistence, and good work.
+            </p>
+          </div>
+        </div>
+        <blockquote className="rounded-3xl border border-(--accent)/20 bg-white/5 p-6 text-white">
           <p className="font-playfair text-2xl italic text-white">
-            “Automation isn’t about shortcuts — it’s about smarter effort.”
+            “Success isn’t a shortcut—it’s doing the work and helping others win too.”
           </p>
-          <footer className="mt-4 text-sm uppercase tracking-[0.3em] text-white/50">
-            BUXI DIGITAL
-          </footer>
+          <footer className="mt-4 text-sm uppercase tracking-[0.3em] text-white/50">Founder, BUXI DIGITAL</footer>
         </blockquote>
       </section>
       <aside className="space-y-6">
@@ -40,14 +49,12 @@ export default function AboutPage() {
             priority
           />
         </div>
-        <div className="rounded-3xl border border-white/10 bg-white/3 p-6 text-sm text-white/65">
-          <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-(--cyan)">
-            Core values
-          </h2>
-          <ul className="space-y-2 text-white/70">
-            <li>Transparency first—reporting every execution, win or loss.</li>
-            <li>Education equals retention—clients stay when they understand.</li>
-            <li>Security as a habit—least privilege from API to community roles.</li>
+        <div className="rounded-3xl border border-white/10 bg-white/4 p-6 text-sm text-white/70">
+          <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-(--cyan)">What guides our work</h2>
+          <ul className="space-y-2">
+            <li>Keep automation observable—if you can’t explain it, you shouldn’t run it.</li>
+            <li>Teach as you build—education keeps clients and communities aligned.</li>
+            <li>Lead with integrity—document results, disclose risks, and share credit.</li>
           </ul>
         </div>
       </aside>
